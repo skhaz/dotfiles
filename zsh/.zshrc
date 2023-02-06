@@ -5,7 +5,6 @@ ZSH_THEME="lambda"
 plugins=(
 	brew
 	asdf
-	docker
 	git
 )
 
