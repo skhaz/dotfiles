@@ -6,8 +6,8 @@
 	email = 46259+skhaz@users.noreply.github.com
 [push]
 	autoSetupRemote = true
+[rerere]
+	enabled = true
 [url "git@github.com:"]
 	insteadOf = git://github.com/
 	insteadOf = https://github.com/
-[rerere]
-	enabled = true
