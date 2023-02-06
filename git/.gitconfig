@@ -1,0 +1,13 @@
+[core]
+	autocrlf = false
+	excludesfile = $HOME/.gitignore
+[user]
+	name = Rodrigo Delduca
+	email = 46259+skhaz@users.noreply.github.com
+[push]
+	autoSetupRemote = true
+[url "git@github.com:"]
+	insteadOf = git://github.com/
+	insteadOf = https://github.com/
+[rerere]
+	enabled = true
