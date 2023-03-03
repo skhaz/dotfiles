@@ -1,6 +1,6 @@
 [core]
 	autocrlf = false
-	excludesfile = $HOME/.gitignore
+	excludesfile = /Users/skhaz/.gitignore
 [user]
 	name = Rodrigo Delduca
 	email = 46259+skhaz@users.noreply.github.com
