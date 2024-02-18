@@ -3,7 +3,7 @@
 	excludesfile = /Users/skhaz/.gitignore
 [user]
 	name = Rodrigo Delduca
-	email = 46259+skhaz@users.noreply.github.com
+	email = rodrigo@delduca.org 
 [push]
 	autoSetupRemote = true
 [rerere]
@@ -13,3 +13,5 @@
 	insteadOf = https://github.com/
 [submodule]
 	recurse = true
+[safe]
+	directory = /workspace
