@@ -22,8 +22,8 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ## Install
 
 ```bash
-git clone <repo-url> ~/dotfiles
-cd ~/dotfiles
+git clone <repo-url> ~/.dotfiles
+cd ~/.dotfiles
 stow tmux nvim opencode ghostty
 ```
 
