@@ -11,6 +11,8 @@ macos-option-as-alt = true
 
 confirm-close-surface = false
 
+keybind = super+k=text:\x0c
+
 macos-icon = blueprint
 
 # Colors (One Dark)
