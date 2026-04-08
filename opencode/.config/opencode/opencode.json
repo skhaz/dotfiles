@@ -1,14 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
-    "open-plan-annotator@latest",
-    "opencode-claude-bridge@1.6.1"
-  ],
-  "mcp": {
-    "sentry": {
-      "type": "remote",
-      "url": "https://mcp.sentry.dev/mcp",
-      "oauth": {}
-    }
-  }
+    "open-plan-annotator@latest"
+  ]
 }
