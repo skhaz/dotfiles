@@ -5,5 +5,6 @@
 	autoSetupRemote = true
 [core]
 	pager = less -FRX
+	excludesfile = /Users/me/.gitignore
 [url "git@git.spiralscout.com:"]
 	insteadOf = https://git.spiralscout.com/
