@@ -9,5 +9,5 @@ alias vim=nvim
 export EDITOR="nvim"
 
 chat() {
-  uv tool run llm "$*"
+  uv tool run llm -m gpt-5.4 -o temperature 0 -- "$*"
 }
