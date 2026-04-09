@@ -11,6 +11,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 | `opencode`   | OpenCode (plugins and MCP servers) |
 | `git`        | Git configuration and global ignore |
 | `ghostty`    | Ghostty terminal (One Dark theme)  |
+| `zsh`        | Zsh shell configuration            |
 
 ## Dependencies
 
@@ -20,13 +21,14 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 - [tmux](https://github.com/tmux/tmux)
 - [Ghostty](https://ghostty.org/)
 - [OpenCode](https://opencode.ai/)
+- [Zsh](https://www.zsh.org/)
 
 ## Install
 
 ```bash
 git clone <repo-url> ~/.dotfiles
 cd ~/.dotfiles
-stow tmux nvim opencode ghostty git
+stow tmux nvim opencode ghostty git zsh
 ```
 
 ## Install a single package
