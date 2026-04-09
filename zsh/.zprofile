@@ -9,7 +9,7 @@ alias vim=nvim
 export EDITOR="nvim"
 
 chat() {
-  uv tool run llm -m gpt-5.4 -o temperature 0 -- "$*"
+  uv tool run llm chat -o temperature 0
 }
 
 alias chat='noglob chat'
