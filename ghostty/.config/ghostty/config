@@ -10,6 +10,7 @@ font-size = 14
 confirm-close-surface = false
 
 keybind = super+k=text:\x0c
+keybind = super+n=text:\x01c
 
 keybind = super+digit_1=text:\x1b\x31
 keybind = super+digit_2=text:\x1b\x32
