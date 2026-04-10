@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "open-plan-annotator@latest"
-  ]
+  "permission": "allow",
+  "plugin": ["open-plan-annotator@latest"]
 }
