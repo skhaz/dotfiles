@@ -1,5 +1,4 @@
 require("options")
-require("diagnostics")
 require("autocmds")
 require("plugins")
 require("lsp")
