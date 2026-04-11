@@ -10,7 +10,7 @@
 
 ## Package Management
 
-- Always prefer installing tools and runtimes via `mise` (e.g. `mise use`, `mise install`) instead of `brew` or other package managers.
+- Always prefer installing tools and runtimes via `mise` (e.g. `mise use`, `mise install`) instead of `brew` or other package managers. Or use Docker.
 - NEVER run `brew install` autonomously. Always ask for explicit user permission before installing anything via `brew`.
 - When suggesting installation of any CLI tool, language runtime, or development dependency, check if it can be managed by `mise` first.
 
