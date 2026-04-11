@@ -13,6 +13,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.env
+export $(cat $HOME/.env | xargs)
 
 
