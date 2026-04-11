@@ -4,7 +4,7 @@ library: ~/.config/beets/library.db
 plugins: fetchart embedart chroma musicbrainz
 
 acoustid:
-  apikey: sktu31tGkT
+  apikey: $ACOUSTID_API_KEY
 
 fetchart:
   auto: yes
