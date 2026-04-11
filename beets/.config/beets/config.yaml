@@ -1,0 +1,32 @@
+directory: ~/Documents/Music
+library: ~/.config/beets/library.db
+
+plugins: fetchart embedart chroma musicbrainz
+
+acoustid:
+  apikey: sktu31tGkT
+
+fetchart:
+  auto: yes
+  cautious: yes
+  minwidth: 600
+  sources: coverart itunes filesystem
+
+embedart:
+  auto: yes
+  remove_art_file: no
+
+import:
+  move: yes
+  write: yes
+  copy: no
+  resume: ask
+  autotag: yes
+  quiet_fallback: skip
+  incremental: no
+
+paths:
+  default: $albumartist/$album%aunique{}/$track - $title
+  singleton: Non-Album/$artist/$title
+  comp: Compilations/$album%aunique{}/$track - $title
+

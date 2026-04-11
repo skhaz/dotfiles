@@ -10,7 +10,10 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 | `nvim`       | Neovim (Lazy.nvim, LSP, Telescope) |
 | `opencode`   | OpenCode (plugins and MCP servers) |
 | `git`        | Git configuration and global ignore |
+| `beets`      | Beets music library manager        |
 | `ghostty`    | Ghostty terminal (One Dark theme)  |
+| `mise`       | mise-en-place tool manager         |
+| `zed`        | Zed editor settings                |
 | `zsh`        | Zsh shell configuration            |
 
 ## Dependencies
@@ -20,7 +23,10 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 - [Neovim](https://neovim.io/) >= 0.10
 - [tmux](https://github.com/tmux/tmux)
 - [Ghostty](https://ghostty.org/)
+- [Beets](https://beets.io/)
 - [OpenCode](https://opencode.ai/)
+- [mise](https://mise.jdx.dev/)
+- [Zed](https://zed.dev/)
 - [Zsh](https://www.zsh.org/)
 
 ## Install
@@ -28,7 +34,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ```bash
 git clone <repo-url> ~/.dotfiles
 cd ~/.dotfiles
-stow tmux nvim opencode ghostty git zsh
+stow tmux nvim opencode beets ghostty git mise zed zsh
 ```
 
 ## Install a single package

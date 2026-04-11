@@ -1,0 +1,21 @@
+{
+  "disable_ai": true,
+  "format_on_save": "off",
+  "tab_size": 2,
+  "theme": "One Dark",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 3000,
+    },
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "project_panel": {
+    "dock": "right",
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  }
+}
