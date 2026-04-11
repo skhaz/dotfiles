@@ -4,6 +4,8 @@ working-directory = /opt/workspace
 maximize = true
 window-decoration = false
 
+theme = Atom One Dark
+
 font-family = Menlo
 font-size = 14
 
@@ -26,4 +28,3 @@ macos-icon = blueprint
 macos-option-as-alt = true
 mouse-hide-while-typing = true
 
-theme = Atom One Dark
