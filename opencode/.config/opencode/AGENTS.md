@@ -15,15 +15,9 @@
 
 ## C++
 
-- Prefer move semantics and `std::move` over copies. Use sink-by-value idiom.
-- Avoid heap allocations; prefer stack, `std::array`, `emplace_back`/`emplace`.
-- Favor O(1)/O(N) algorithms. Prefer `ankerl::unordered_dense` or similar high-performance libraries over `std::unordered_map`/`std::unordered_set`.
-- Pass large types by `const&` (read-only) or by value (sink). Use `std::string_view`/`std::span` for non-owning access.
-- Call `reserve()` when size is known. Use `std::back_inserter` with STL algorithms.
-- Prefer range-based `for`, structured bindings, `constexpr`/`const` aggressively.
-- Use smart pointers (`std::unique_ptr`, `std::shared_ptr`) and `std::make_unique`/`std::make_shared`. Use `unique_ptr` with custom deleters for C-style resources.
-- RAII for all resources. No manual `new`/`delete`.
-- Use `[[nodiscard]]` on functions whose return values must not be ignored.
+- RAII everywhere: smart pointers (`unique_ptr`/`shared_ptr`), no manual `new`/`delete`. Prefer move semantics, stack allocation, `emplace_back`, and `reserve()`.
+- Modern idioms: range-based `for`, structured bindings, `constexpr`/`const`, `std::string_view`/`std::span`, `[[nodiscard]]`. Pass large types by `const&` or by value (sink).
+- Performance-first: favor O(1)/O(N) algorithms, prefer `ankerl::unordered_dense` over `std::unordered_map`/`std::unordered_set`.
 
 ## Code Quality
 
