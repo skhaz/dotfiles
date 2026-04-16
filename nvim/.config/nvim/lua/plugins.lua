@@ -10,17 +10,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-  -- colorscheme
-  {
-    "AlexvZyl/nordic.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("nordic").setup({})
-      vim.cmd.colorscheme("nordic")
-    end,
-  },
-
   -- file tree
   {
     "nvim-tree/nvim-tree.lua",

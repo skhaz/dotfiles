@@ -15,7 +15,7 @@ o.number = true
 o.relativenumber = true
 o.cursorline = true
 o.signcolumn = "yes"
-o.termguicolors = true
+o.termguicolors = false
 o.scrolloff = 8
 
 -- splits
