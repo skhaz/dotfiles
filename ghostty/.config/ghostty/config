@@ -27,4 +27,5 @@ keybind = super+digit_9=text:\x1b\x39
 macos-icon = blueprint
 macos-option-as-alt = true
 mouse-hide-while-typing = true
+focus-follows-mouse = true
 
