@@ -19,6 +19,10 @@
 - Modern idioms: range-based `for`, structured bindings, `constexpr`/`const`, `std::string_view`/`std::span`, `[[nodiscard]]`. Pass large types by `const&` or by value (sink).
 - Performance-first: favor O(1)/O(N) algorithms, prefer `ankerl::unordered_dense` over `std::unordered_map`/`std::unordered_set`.
 
+## CLI Tools
+
+- `jq` binary available for JSON processing.
+
 ## Code Quality
 
 - Avoid N+1 queries. Prefer batch/bulk operations and eager loading.
