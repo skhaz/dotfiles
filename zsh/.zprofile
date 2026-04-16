@@ -13,3 +13,5 @@ chat() {
 }
 
 alias chat='noglob chat'
+
+alias claude='claude --dangerously-skip-permissions'
