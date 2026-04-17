@@ -27,3 +27,4 @@ gh = "latest"
 glab = { version = "latest", exe = "glab" }
 cmake = "latest"
 claude-code = "latest"
+postgres = "latest"
