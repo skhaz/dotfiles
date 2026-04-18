@@ -23,6 +23,12 @@
 
 - `jq` binary available for JSON processing.
 
+## External API Access
+
+- GitHub: Use `gh` CLI exclusively. Never web fetch.
+- GitLab (git.spiralscout.com): Use `glab` CLI exclusively. Never web fetch.
+- Rule: Always use CLIs for git platform APIs. No direct HTTP fetch.
+
 ## Code Quality
 
 - Avoid N+1 queries. Prefer batch/bulk operations and eager loading.
