@@ -32,7 +32,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ## Install
 
 ```bash
-git clone <repo-url> ~/.dotfiles
+git clone git@github.com:skhaz/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow tmux nvim opencode beets ghostty git mise zed zsh
 ```
