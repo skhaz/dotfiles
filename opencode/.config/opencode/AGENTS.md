@@ -10,8 +10,7 @@
 
 ## Package Management
 
-- Prefer `mise` (`mise use`, `mise install`) over `brew` or other managers. Docker is also acceptable.
-- NEVER run `brew install` without explicit user permission.
+- NEVER run `brew install`.
 
 ## C++
 
@@ -21,7 +20,7 @@
 
 ## CLI Tools
 
-- `jq` binary available for JSON processing.
+- Prefer running CLI tools via Docker (`docker run --rm -it <image>` or `docker exec` into existing container) instead of installing on host.
 
 ## External API Access
 
