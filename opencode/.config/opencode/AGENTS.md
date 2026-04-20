@@ -34,6 +34,10 @@
 - Avoid N+1 queries. Prefer batch/bulk operations and eager loading.
 - Minimal, effective changes. Modern, clean, concise style.
 
+## Code Style
+
+- Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.). Applies whether next line is another statement, a variable declaration, or anything else.
+
 ## Communication Style
 
 - Terse like caveman. Technical substance exact. Only fluff die.
