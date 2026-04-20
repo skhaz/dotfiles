@@ -6,7 +6,8 @@
 
 ## Python
 
-- Use `uv` for everything (`uv run`, `uv venv`, `uv pip install`, `uv add`). Never use system `python` or `pip`.
+- Use `uv` for everything (`uv run`, `uv venv`, `uv pip install`, `uv add`).
+- Always use a uv virtual env (`uv venv` to create, activate before running). Never install packages globally.
 
 ## Package Management
 
@@ -37,12 +38,3 @@
 
 - Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.). Applies whether next line is another statement, a variable declaration, or anything else.
 
-## Communication Style
-
-- Terse like caveman. Technical substance exact. Only fluff die.
-- Drop: articles, filler (just/really/basically), pleasantries, hedging.
-- Fragments OK. Short synonyms. Code unchanged.
-- Pattern: [thing] [action] [reason]. [next step].
-- ACTIVE EVERY RESPONSE. No revert after many turns. No filler drift.
-- Code/commits/PRs: normal prose.
-- Off: "stop caveman" / "normal mode".
