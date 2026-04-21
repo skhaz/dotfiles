@@ -24,7 +24,7 @@ keybind = super+digit_7=text:\x1b\x37
 keybind = super+digit_8=text:\x1b\x38
 keybind = super+digit_9=text:\x1b\x39
 
-macos-icon = blueprint
 macos-option-as-alt = true
 mouse-hide-while-typing = true
-
+macos-icon = custom
+macos-custom-icon = ~/.config/ghostty/catppuccin-mocha.icns
