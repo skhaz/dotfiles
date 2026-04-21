@@ -38,3 +38,7 @@
 
 - Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.). Applies whether next line is another statement, a variable declaration, or anything else.
 
+## Git Commits
+
+- NEVER add co-authors to commits. No `Co-authored-by` trailers, ever. No exceptions.
+
