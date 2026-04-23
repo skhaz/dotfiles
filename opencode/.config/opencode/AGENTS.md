@@ -11,7 +11,7 @@
 
 ## Package Management
 
-- NEVER run `brew install`.
+- NEVER run `brew install`. Use Docker instead.
 
 ## C++
 
