@@ -2,11 +2,5 @@
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
   "permission": "allow",
-  "plugin": ["open-plan-annotator@latest"],
-  "mcp": {
-    "chrome-devtools": {
-      "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--headless"]
-    }
-  }
+  "plugin": ["open-plan-annotator@latest"]
 }
