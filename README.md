@@ -54,3 +54,7 @@ stow -D nvim
 ```bash
 stow -R nvim
 ```
+
+## Pre-commit
+
+Always run all tests and linters before committing.
