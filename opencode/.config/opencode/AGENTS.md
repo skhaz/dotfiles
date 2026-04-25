@@ -33,6 +33,23 @@
 
 - Avoid N+1 queries. Prefer batch/bulk operations and eager loading.
 - Minimal, effective changes. Modern, clean, concise style.
+- Create functions/methods only when strictly necessary, reused more than once, or needed to simplify a complex statement. Otherwise inline the code — extra indirection forces the reader to jump around and hurts readability.
+
+## Performance
+
+- Always adopt best practices for performance and memory usage, regardless of language or domain.
+- Prefer efficient algorithms and data structures (favor O(1)/O(log N)/O(N) over higher complexity).
+- Minimize allocations: reuse buffers, avoid unnecessary copies, prefer streaming over loading-all-in-memory.
+- Release resources deterministically (RAII, `defer`, context managers, `using`, etc.).
+- Profile before optimizing hot paths; avoid premature optimization but never write knowingly wasteful code.
+- Prefer lazy evaluation, batching, and caching where appropriate; avoid redundant work and repeated computation.
+
+## No Shortcuts
+
+- Shortcuts, hacks, workarounds, and quick fixes are strictly forbidden.
+- Problems must be solved with clean, clear, modern code.
+- Never mask symptoms: identify the root cause and fix it properly.
+- No `TODO`/`FIXME` left for later — resolve it now or open a tracked issue.
 
 ## Code Style
 
