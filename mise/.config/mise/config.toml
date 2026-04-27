@@ -28,3 +28,5 @@ glab = { version = "latest", exe = "glab" }
 cmake = "latest"
 claude-code = "latest"
 postgres = "latest"
+k3d = "latest"
+helm = "latest"

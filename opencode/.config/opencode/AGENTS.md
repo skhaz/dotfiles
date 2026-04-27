@@ -63,3 +63,7 @@
 
 - NEVER add co-authors to commits. No `Co-authored-by` trailers, ever. No exceptions.
 
+## Emojis
+
+- No emojis, anywhere, ever. Not in code, comments, commit messages, PR descriptions, documentation, chat output, file names, or any other context. Zero exceptions.
+
