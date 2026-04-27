@@ -13,6 +13,10 @@
 
 - NEVER run `brew install`. Use Docker instead.
 
+## Docker
+
+- If Docker is not running, run `orb start` and wait until it becomes available again before proceeding.
+
 ## C++
 
 - RAII everywhere: smart pointers (`unique_ptr`/`shared_ptr`), no manual `new`/`delete`. Prefer move semantics, stack allocation, `emplace_back`, and `reserve()`.
