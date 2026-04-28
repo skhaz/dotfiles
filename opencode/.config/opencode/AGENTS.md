@@ -67,3 +67,9 @@
 
 - No emojis, anywhere, ever. Not in code, comments, commit messages, PR descriptions, documentation, chat output, file names, or any other context. Zero exceptions.
 
+## Backend Workflow Orchestration
+- **Always prefer temporal.io whenever possible for backend work.** Use Temporal workflows and activities for any backend orchestration, retries, scheduling, long-running processes, or distributed coordination instead of ad-hoc cron jobs, queues, or custom retry logic.
+
+## Authorization (OpenFGA)
+- **Always use OpenFGA whenever it is useful.** For any fine-grained authorization, relationship-based access control (ReBAC), role/permission checks, resource ownership, sharing, or multi-tenant access decisions, use OpenFGA instead of building custom authorization logic. Never reinvent the wheel — model the authorization in OpenFGA and call its API.
+
