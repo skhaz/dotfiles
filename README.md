@@ -14,7 +14,6 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 | `ghostty`    | Ghostty terminal (One Dark theme)  |
 | `mise`       | mise-en-place tool manager         |
 | `zed`        | Zed editor settings                |
-| `sublime-text` | Sublime Text (One Dark, no minimap) |
 | `zsh`        | Zsh shell configuration            |
 
 ## Dependencies
@@ -28,7 +27,6 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 - [OpenCode](https://opencode.ai/)
 - [mise](https://mise.jdx.dev/)
 - [Zed](https://zed.dev/)
-- [Sublime Text](https://www.sublimetext.com/)
 - [Zsh](https://www.zsh.org/)
 
 ## Install
@@ -36,7 +34,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ```bash
 git clone git@github.com:skhaz/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow tmux nvim opencode beets ghostty git mise zed sublime-text zsh
+stow tmux nvim opencode beets ghostty git mise zed zsh
 ```
 
 ## Install a single package
