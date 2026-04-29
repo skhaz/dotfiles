@@ -5,17 +5,17 @@
   "theme": "One Dark",
   "autosave": {
     "after_delay": {
-      "milliseconds": 3000,
-    },
+      "milliseconds": 3000
+    }
   },
   "collaboration_panel": {
-    "button": false,
+    "button": false
   },
   "project_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   }
 }
