@@ -73,3 +73,6 @@
 ## Authorization (OpenFGA)
 - **Always use OpenFGA whenever it is useful.** For any fine-grained authorization, relationship-based access control (ReBAC), role/permission checks, resource ownership, sharing, or multi-tenant access decisions, use OpenFGA instead of building custom authorization logic. Never reinvent the wheel — model the authorization in OpenFGA and call its API.
 
+## Parallel Agent Sessions
+- Use git worktrees to run multiple agent sessions in parallel.
+
