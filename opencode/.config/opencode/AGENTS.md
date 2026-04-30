@@ -76,3 +76,20 @@
 ## Parallel Agent Sessions
 - Use git worktrees to run multiple agent sessions in parallel.
 
+## Destructive Commands - ABSOLUTELY FORBIDDEN
+
+- **NEVER, UNDER ANY CIRCUMSTANCES, RUN DESTRUCTIVE COMMANDS.** This is an absolute, non-negotiable, zero-exception rule.
+- Forbidden commands include, but are not limited to:
+  - `rm -rf`, `rm -f`, `rm -r`, or any recursive/forced deletion.
+  - `git reset --hard`, `git clean -fd`, `git checkout -- .`, `git restore .`, `git branch -D`, `git push --force`, `git push -f`, `git push --force-with-lease`.
+  - `git commit --amend` on already-pushed commits.
+  - `DROP TABLE`, `DROP DATABASE`, `TRUNCATE`, `DELETE FROM` without a precise `WHERE` clause.
+  - `dd`, `mkfs`, `chmod -R`, `chown -R` on system paths.
+  - `kill -9` on unknown processes, `killall`, `pkill` without precise targeting.
+  - `docker system prune`, `docker volume prune`, `docker rm -f`, `docker rmi -f` without explicit scope.
+  - Any command that overwrites, deletes, or irreversibly modifies files, branches, databases, volumes, or remote state.
+- **No exceptions. No "just this once." No "I'll be careful." No "the user probably meant it."**
+- If a destructive action seems necessary, **STOP** and ask the user for explicit, unambiguous confirmation describing exactly what will be destroyed. Wait for a clear "yes, do it" before proceeding.
+- Prefer reversible alternatives: move to trash instead of deleting, create a backup branch before resets, use soft deletes, dry-run flags (`--dry-run`, `-n`), and `--force-with-lease` only when absolutely required and approved.
+- When in doubt, do nothing. Asking is always cheaper than recovering lost work.
+
