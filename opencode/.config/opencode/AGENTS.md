@@ -76,6 +76,13 @@
 ## Parallel Agent Sessions
 - Use git worktrees to run multiple agent sessions in parallel.
 
+## Cross-Platform Portability
+- All code must be portable across Windows, Linux, and macOS.
+- All code must run on both x64 (amd64) and ARM (arm64/aarch64) architectures.
+- Avoid OS-specific APIs, paths, or shell commands; use cross-platform abstractions (e.g., `filepath` over hardcoded separators, `os.PathSeparator`, `pathlib`, `std::filesystem`).
+- Avoid architecture-specific assumptions: no hardcoded word size, endianness, pointer size, or SIMD intrinsics without portable fallbacks.
+- Test or build for all target OS/arch combinations before considering work complete.
+
 ## Destructive Commands - ABSOLUTELY FORBIDDEN
 
 - **NEVER, UNDER ANY CIRCUMSTANCES, RUN DESTRUCTIVE COMMANDS.** This is an absolute, non-negotiable, zero-exception rule.
