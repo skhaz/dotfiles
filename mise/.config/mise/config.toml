@@ -1,3 +1,10 @@
+[settings]
+auto_install = false
+not_found_auto_install = false
+exec_auto_install = false
+plugin_autoupdate_last_check_duration = "9999d"
+fetch_remote_versions_cache = "9999d"
+
 [tools]
 biome = "latest"
 neovim = "latest"
