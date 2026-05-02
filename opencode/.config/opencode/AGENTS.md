@@ -39,6 +39,13 @@
 - Minimal, effective changes. Modern, clean, concise style.
 - Create functions/methods only when strictly necessary, reused more than once, or needed to simplify a complex statement. Otherwise inline the code — extra indirection forces the reader to jump around and hurts readability.
 
+## Linting and Static Analysis - ALWAYS
+
+- **Always run a linter (preferably an LSP) after every change, on every file type — code, config, markup, schemas, infra, docs.** Catch errors locally, not in CI.
+- Prefer LSP diagnostics over plain linters: they cover types, cross-file refs, and schema validation that linters miss.
+- Use each ecosystem's standard tooling (e.g. `golangci-lint`, `ruff`+`pyright`, `tsc`+`eslint`, `cargo clippy`, `clang-tidy`, `shellcheck`, `yamllint`+`check-jsonschema`, `hadolint`, `terraform validate`+`tflint`, `buf lint`, `markdownlint`). For any other format, use its standard linter/LSP/schema validator.
+- Fix all errors and warnings before finishing. Never push code that fails local checks.
+
 ## Performance
 
 - Always adopt best practices for performance and memory usage, regardless of language or domain.
