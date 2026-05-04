@@ -66,6 +66,13 @@
 ## Git Commits
 
 - **NEVER** add co-authors to commits. No `Co-authored-by` trailers, ever.
+- Keep commit messages brief and non-verbose. A few lines, covering only what is critical for the reader.
+
+## Pull Request / Merge Request Descriptions
+
+- Always brief and non-verbose. A few lines, covering only what is critical for the reader.
+- For UI changes (web browser), include screenshots with captions.
+- For changes to a service with a CLI, include logs and command-line examples.
 
 ## Emojis
 
