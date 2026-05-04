@@ -7,7 +7,7 @@
 ## Python
 
 - Use `uv` for everything (`uv run`, `uv venv`, `uv pip install`, `uv add`).
-- Always use a uv virtual env (`uv venv` to create, activate before running). Never install packages globally.
+- Always work inside a `uv` virtual env. Never install globally.
 
 ## Package Management
 
@@ -15,95 +15,89 @@
 
 ## Docker
 
-- If Docker is not running, run `orb start` and wait until it becomes available again before proceeding.
+- If Docker is not running, run `orb start` and wait until it is ready.
 
 ## C++
 
-- RAII everywhere: smart pointers (`unique_ptr`/`shared_ptr`), no manual `new`/`delete`. Prefer move semantics, stack allocation, `emplace_back`, and `reserve()`.
+- RAII everywhere: smart pointers, no manual `new`/`delete`. Prefer move semantics, stack allocation, `emplace_back`, `reserve()`.
 - Modern idioms: range-based `for`, structured bindings, `constexpr`/`const`, `std::string_view`/`std::span`, `[[nodiscard]]`. Pass large types by `const&` or by value (sink).
-- Performance-first: favor O(1)/O(N) algorithms, prefer `ankerl::unordered_dense` over `std::unordered_map`/`std::unordered_set`.
+- Performance-first: prefer O(1)/O(N) algorithms and `ankerl::unordered_dense` over `std::unordered_map`/`std::unordered_set`.
 
 ## CLI Tools
 
-- Prefer running CLI tools via Docker (`docker run --rm -it <image>` or `docker exec` into existing container) instead of installing on host.
+- Run CLI tools via Docker instead of installing on the host.
 
 ## External API Access
 
-- GitHub: Use `gh` CLI exclusively. Never web fetch.
-- GitLab (git.spiralscout.com): Use `glab` CLI exclusively. Never web fetch.
-- Rule: Always use CLIs for git platform APIs. No direct HTTP fetch.
+- GitHub: use `gh` CLI exclusively. Never web fetch.
+- GitLab (git.spiralscout.com): use `glab` CLI exclusively. Never web fetch.
 
 ## Code Quality
 
-- Avoid N+1 queries. Prefer batch/bulk operations and eager loading.
+- Avoid N+1 queries. Use batch/bulk operations and eager loading.
 - Minimal, effective changes. Modern, clean, concise style.
-- Create functions/methods only when strictly necessary, reused more than once, or needed to simplify a complex statement. Otherwise inline the code — extra indirection forces the reader to jump around and hurts readability.
+- Inline code by default. Extract a function only when reused or needed to clarify a complex statement.
 
 ## Linting and Static Analysis - ALWAYS
 
-- **Always run a linter (preferably an LSP) after every change, on every file type — code, config, markup, schemas, infra, docs.** Catch errors locally, not in CI.
-- Prefer LSP diagnostics over plain linters: they cover types, cross-file refs, and schema validation that linters miss.
-- Use each ecosystem's standard tooling (e.g. `golangci-lint`, `ruff`+`pyright`, `tsc`+`eslint`, `cargo clippy`, `clang-tidy`, `shellcheck`, `yamllint`+`check-jsonschema`, `hadolint`, `terraform validate`+`tflint`, `buf lint`, `markdownlint`). For any other format, use its standard linter/LSP/schema validator.
-- Fix all errors and warnings before finishing. Never push code that fails local checks.
+- Run a linter (and *also* an LSP) after every change, on every file type.
+- Use each ecosystem's standard tooling.
+- Fix all errors and warnings before finishing.
 
 ## Performance
 
-- Always adopt best practices for performance and memory usage, regardless of language or domain.
-- Prefer efficient algorithms and data structures (favor O(1)/O(log N)/O(N) over higher complexity).
-- Minimize allocations: reuse buffers, avoid unnecessary copies, prefer streaming over loading-all-in-memory.
-- Release resources deterministically (RAII, `defer`, context managers, `using`, etc.).
-- Profile before optimizing hot paths; avoid premature optimization but never write knowingly wasteful code.
-- Prefer lazy evaluation, batching, and caching where appropriate; avoid redundant work and repeated computation.
+- Adopt performance and memory best practices regardless of language.
+- Prefer efficient algorithms and data structures (O(1)/O(log N)/O(N)).
+- Minimize allocations: reuse buffers, avoid copies, prefer streaming.
+- Release resources deterministically (RAII, `defer`, context managers, `using`).
+- Profile before optimizing hot paths. Avoid premature optimization, but never write knowingly wasteful code.
+- Prefer lazy evaluation, batching, and caching where appropriate.
 
 ## No Shortcuts
 
-- Shortcuts, hacks, workarounds, and quick fixes are strictly forbidden.
-- Problems must be solved with clean, clear, modern code.
-- Never mask symptoms: identify the root cause and fix it properly.
+- No hacks, workarounds, or quick fixes.
+- Fix root causes, not symptoms.
 - No `TODO`/`FIXME` left for later — resolve it now or open a tracked issue.
 
 ## Code Style
 
-- Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.). Applies whether next line is another statement, a variable declaration, or anything else.
+- Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.).
 
 ## Git Commits
 
-- NEVER add co-authors to commits. No `Co-authored-by` trailers, ever. No exceptions.
+- **NEVER** add co-authors to commits. No `Co-authored-by` trailers, ever.
 
 ## Emojis
 
-- No emojis, anywhere, ever. Not in code, comments, commit messages, PR descriptions, documentation, chat output, file names, or any other context. Zero exceptions.
+- No emojis, anywhere, ever. Zero exceptions.
 
 ## Backend Workflow Orchestration
-- **Always prefer temporal.io whenever possible for backend work.** Use Temporal workflows and activities for any backend orchestration, retries, scheduling, long-running processes, or distributed coordination instead of ad-hoc cron jobs, queues, or custom retry logic.
+
+- Prefer temporal.io for backend orchestration, retries, scheduling, long-running processes, and distributed coordination. No ad-hoc cron, queues, or custom retry logic.
 
 ## Authorization (OpenFGA)
-- **Always use OpenFGA whenever it is useful.** For any fine-grained authorization, relationship-based access control (ReBAC), role/permission checks, resource ownership, sharing, or multi-tenant access decisions, use OpenFGA instead of building custom authorization logic. Never reinvent the wheel — model the authorization in OpenFGA and call its API.
 
-## Parallel Agent Sessions
-- Use git worktrees to run multiple agent sessions in parallel.
+- Use OpenFGA for fine-grained authorization, ReBAC, role/permission checks, ownership, sharing, and multi-tenant access. Do not build custom authorization logic.
 
 ## Cross-Platform Portability
-- All code must be portable across Windows, Linux, and macOS.
-- All code must run on both x64 (amd64) and ARM (arm64/aarch64) architectures.
-- Avoid OS-specific APIs, paths, or shell commands; use cross-platform abstractions (e.g., `filepath` over hardcoded separators, `os.PathSeparator`, `pathlib`, `std::filesystem`).
-- Avoid architecture-specific assumptions: no hardcoded word size, endianness, pointer size, or SIMD intrinsics without portable fallbacks.
-- Test or build for all target OS/arch combinations before considering work complete.
+
+- Code must run on Windows, Linux, and macOS, on both x64 and ARM.
+- Avoid OS-specific APIs, paths, or shell commands. Use cross-platform abstractions (`filepath`, `pathlib`, `std::filesystem`).
+- Avoid architecture-specific assumptions: word size, endianness, pointer size, SIMD intrinsics without portable fallbacks.
+- Test or build for all target OS/arch combinations before finishing.
 
 ## Destructive Commands - ABSOLUTELY FORBIDDEN
 
-- **NEVER, UNDER ANY CIRCUMSTANCES, RUN DESTRUCTIVE COMMANDS.** This is an absolute, non-negotiable, zero-exception rule.
-- Forbidden commands include, but are not limited to:
-  - `rm -rf`, `rm -f`, `rm -r`, or any recursive/forced deletion.
-  - `git reset --hard`, `git clean -fd`, `git checkout -- .`, `git restore .`, `git branch -D`, `git push --force`, `git push -f`, `git push --force-with-lease`.
+- NEVER run destructive commands. No exceptions.
+- Forbidden examples:
+  - `rm -rf`, `rm -f`, `rm -r`, any recursive/forced deletion.
+  - `git reset --hard`, `git clean -fd`, `git checkout -- .`, `git restore .`, `git branch -D`, `git push --force`/`-f`/`--force-with-lease`.
   - `git commit --amend` on already-pushed commits.
-  - `DROP TABLE`, `DROP DATABASE`, `TRUNCATE`, `DELETE FROM` without a precise `WHERE` clause.
+  - `DROP TABLE`, `DROP DATABASE`, `TRUNCATE`, `DELETE FROM` without a precise `WHERE`.
   - `dd`, `mkfs`, `chmod -R`, `chown -R` on system paths.
   - `kill -9` on unknown processes, `killall`, `pkill` without precise targeting.
   - `docker system prune`, `docker volume prune`, `docker rm -f`, `docker rmi -f` without explicit scope.
-  - Any command that overwrites, deletes, or irreversibly modifies files, branches, databases, volumes, or remote state.
-- **No exceptions. No "just this once." No "I'll be careful." No "the user probably meant it."**
-- If a destructive action seems necessary, **STOP** and ask the user for explicit, unambiguous confirmation describing exactly what will be destroyed. Wait for a clear "yes, do it" before proceeding.
-- Prefer reversible alternatives: move to trash instead of deleting, create a backup branch before resets, use soft deletes, dry-run flags (`--dry-run`, `-n`), and `--force-with-lease` only when absolutely required and approved.
-- When in doubt, do nothing. Asking is always cheaper than recovering lost work.
-
+  - Anything that overwrites, deletes, or irreversibly modifies files, branches, databases, volumes, or remote state.
+- If a destructive action seems necessary, STOP and ask the user to confirm exactly what will be destroyed. Wait for an explicit "yes" before proceeding.
+- Prefer reversible alternatives: move to trash, create a backup branch before resets, soft deletes, `--dry-run`/`-n` flags.
+- When in doubt, do nothing.
