@@ -93,18 +93,4 @@
 - Avoid architecture-specific assumptions: word size, endianness, pointer size, SIMD intrinsics without portable fallbacks.
 - Test or build for all target OS/arch combinations before finishing.
 
-## Destructive Commands - ABSOLUTELY FORBIDDEN
-
-- NEVER run destructive commands. No exceptions.
-- Forbidden examples:
-  - `rm -rf`, `rm -f`, `rm -r`, any recursive/forced deletion.
-  - `git reset --hard`, `git clean -fd`, `git checkout -- .`, `git restore .`, `git branch -D`, `git push --force`/`-f`/`--force-with-lease`.
-  - `git commit --amend` on already-pushed commits.
-  - `DROP TABLE`, `DROP DATABASE`, `TRUNCATE`, `DELETE FROM` without a precise `WHERE`.
-  - `dd`, `mkfs`, `chmod -R`, `chown -R` on system paths.
-  - `kill -9` on unknown processes, `killall`, `pkill` without precise targeting.
-  - `docker system prune`, `docker volume prune`, `docker rm -f`, `docker rmi -f` without explicit scope.
-  - Anything that overwrites, deletes, or irreversibly modifies files, branches, databases, volumes, or remote state.
-- If a destructive action seems necessary, STOP and ask the user to confirm exactly what will be destroyed. Wait for an explicit "yes" before proceeding.
-- Prefer reversible alternatives: move to trash, create a backup branch before resets, soft deletes, `--dry-run`/`-n` flags.
-- When in doubt, do nothing.
+- Only Deploy_to_PROD_GEN2_EKS/PROD_GEN2 is allowed.
