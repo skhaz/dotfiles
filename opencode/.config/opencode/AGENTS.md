@@ -93,4 +93,3 @@
 - Avoid architecture-specific assumptions: word size, endianness, pointer size, SIMD intrinsics without portable fallbacks.
 - Test or build for all target OS/arch combinations before finishing.
 
-- Only Deploy_to_PROD_GEN2_EKS/PROD_GEN2 is allowed.
