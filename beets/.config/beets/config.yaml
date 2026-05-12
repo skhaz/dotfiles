@@ -10,7 +10,7 @@ fetchart:
   auto: yes
   cautious: yes
   minwidth: 600
-  sources: coverart itunes filesystem
+  sources: [coverart, itunes, filesystem]
 
 embedart:
   auto: yes

@@ -63,6 +63,16 @@
 
 - Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.).
 
+## CI Cost - CRITICAL
+
+- **CI IS EXTREMELY EXPENSIVE. DO NOT WASTE IT.**
+- **ALWAYS** test, lint, type-check, and validate locally **BEFORE** any commit. No exceptions.
+- Reproduce the full CI pipeline locally whenever possible (build, tests, linters, static analysis).
+- **ONLY** commit after local validation passes. If local validation is impossible, state that explicitly.
+- **GROUP** related changes into a single commit whenever possible. Avoid noisy commit chains that re-trigger CI repeatedly.
+- After pushing, **MONITOR** the CI run until it completes. Do not walk away from a red or pending pipeline.
+- A failing CI run caused by something that could have been caught locally is a serious mistake.
+
 ## Git Commits
 
 - **NEVER** add co-authors to commits. No `Co-authored-by` trailers, ever.
