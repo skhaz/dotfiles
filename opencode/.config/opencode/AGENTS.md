@@ -73,6 +73,12 @@
 - After pushing, **MONITOR** the CI run until it completes. Do not walk away from a red or pending pipeline.
 - A failing CI run caused by something that could have been caught locally is a serious mistake.
 
+## Git Branches and Pull/Merge Requests
+
+- **NEVER, EVER** create a git branch without explicit permission. Always ask first.
+- **NEVER, EVER** create a pull request or merge request without explicit permission. Always ask first.
+- This applies to all tools and CLIs (`git`, `gh`, `glab`, etc.). No exceptions.
+
 ## Git Commits
 
 - **NEVER** add co-authors to commits. No `Co-authored-by` trailers, ever.

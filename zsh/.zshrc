@@ -15,3 +15,5 @@ source $ZSH/oh-my-zsh.sh
 
 export $(cat $HOME/.env | xargs)
 
+
+. "/tmp/wippy-test-mac/env"
