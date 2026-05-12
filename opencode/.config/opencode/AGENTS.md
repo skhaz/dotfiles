@@ -81,6 +81,9 @@
 
 ## Git Commits
 
+- **NEVER, EVER** commit without explicit permission. Always ask first.
+- Before committing, you **MUST** have conclusive, empirical proof that the code is correct: tests passing, linters clean, type-checks green, and the feature manually verified when applicable. No guessing, no "should work".
+- Do not waste reviewer time or pollute history with speculative, unverified, or work-in-progress commits.
 - **NEVER** add co-authors to commits. No `Co-authored-by` trailers, ever.
 - Keep commit messages brief and non-verbose. A few lines, covering only what is critical for the reader.
 
