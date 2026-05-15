@@ -4,7 +4,9 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 export PATH="$(mise where postgres)/bin:$PATH"
 
-alias backup=~/Documents/backup.sh
+alias backup=/opt/workspace/personal/tools/backup.sh
+
+alias beets=/opt/workspace/personal/tools/beets.sh
 
 alias vim=nvim
 
