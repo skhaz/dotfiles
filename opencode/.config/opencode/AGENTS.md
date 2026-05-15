@@ -57,11 +57,17 @@
 
 - No hacks, workarounds, or quick fixes.
 - Fix root causes, not symptoms.
-- No `TODO`/`FIXME` left for later — resolve it now or open a tracked issue.
+- **NEVER** leave `TODO` or `FIXME` comments. Everything must be resolved immediately, no exceptions.
 
 ## Code Style
 
 - Always leave a blank line after closing a statement block (`}`, `end`, function, if, for, while, etc.).
+
+## Comments - CRITICAL
+
+- **COMMENTS ARE STRICTLY FORBIDDEN.** Zero exceptions, except the one below.
+- The **ONLY** acceptable comment is one that justifies a genuine workaround or hack, and even then it must be the absolute last resort.
+- Do **NOT** write explanatory, descriptive, redundant, or "what the code does" comments. Code must be self-explanatory through clear naming and structure.
 
 ## CI Cost - CRITICAL
 
