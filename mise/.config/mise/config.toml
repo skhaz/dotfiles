@@ -17,7 +17,6 @@ conan = "latest"
 npm = "latest"
 tmux = "latest"
 aws-cli = { version = "latest", symlink_bins = "true" }
-aws-sam = { version = "latest", symlink_bins = "true" }
 tree-sitter = "latest"
 uv = "latest"
 go = "latest"
